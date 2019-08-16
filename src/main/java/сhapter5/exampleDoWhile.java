@@ -8,5 +8,9 @@ public class exampleDoWhile {
             System.out.println("Step " + n);
             n--;
         } while (n>0);
+
+        do {
+            System.out.println("Step " + n );
+        } while (--n > -10 );
     }
 }
