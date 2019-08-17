@@ -13,7 +13,7 @@ public class bigExample {
             System.out.println("    4. do-while");
             System.out.println("    5. for ");
             System.out.println(" select the desired item ");
-            choice = (char) System.in.read();
+            choice = (char) System.in.read(); //Тут интересно считывается введеный символ, если написать 87 и нажать ентр, он этот шаг пропустит 3 раза, но прокрутит do
         } while (choice<'1' || choice>'5');
 
         switch (choice) {
