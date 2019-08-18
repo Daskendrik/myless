@@ -1,4 +1,4 @@
-package сhapter5;
+package сhapter5.oprFor;
 
 public class exampleFor {
     public static void main (String[] args) {
