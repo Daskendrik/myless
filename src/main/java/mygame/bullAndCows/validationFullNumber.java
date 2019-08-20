@@ -1,7 +1,7 @@
 package mygame.bullAndCows;
 
-public class ValidationFullNumber {
-    public static boolean[] checkNumber(int [] checkNumber){
+class ValidationFullNumber {
+    static boolean[] checkNumber(int[] checkNumber){
         boolean b = false;
         boolean a;
         if (checkNumber[0] < 999 || checkNumber[0] >10000) {
@@ -18,7 +18,6 @@ public class ValidationFullNumber {
                 b = true;
             }
         }
-        boolean[] result = {a, b};
-        return result;
+        return new boolean[]{a, b};
     }
 }

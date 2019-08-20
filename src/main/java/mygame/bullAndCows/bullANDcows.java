@@ -43,7 +43,7 @@ public class BullANDcows {
         // УРОВЕНЬ 1, загадывает и угадывает человек, количество попыток бесконечно
         System.out.println("Игрок 2 угадывает");
         // Проверяем число, которое было введено ( эта проверка уже есть выше)
-        do { // Загадываем число
+        do { // Вводим число для проверки
             System.out.println("Введите 4х значное число, без повторяющихся цифр");
             try{ //тут начинается какая то дичь, надо сюда вернуться, когда дойду до главы соответствующей
                 String s = fullNumber.readLine();
@@ -57,7 +57,7 @@ public class BullANDcows {
             tryNum2 = numberTwo/100%10; // определяем 2 цифру числа
             tryNum1 = numberTwo/1000;// определяем  цифру 1 числа
             int[] checkNumber = {numberTwo, tryNum1, tryNum2, tryNum3, tryNum4 }; // Создаем массив из числа и цифр
-            arrayResult = ValidationFullNumber.checkNumber(checkNumber); //отправляем на проверку число и цифры
+            arrayResult = ValidationFullNumber.checkNumber(checkNumber); //отправляем на проверку число и цифры и впихиваем результат
 
             //если надо будет глянуть какие значения получаем на выходе
            /* for(int i=0; i < 2; i++){
@@ -70,8 +70,13 @@ public class BullANDcows {
 
 
         // Проверяем быков
-        
+
         // Провереям коров
+        int[] actual = {num1, num2, num3, num4};
+        int[] expected = {tryNum1, tryNum2, tryNum3, tryNum4}; // Создаем массив из цифр
+        int countCows = DVcows.checkCows(expected, actual); //отправляем на проверку число и цифры и впихиваем результат
+
+
     }
 
 }
