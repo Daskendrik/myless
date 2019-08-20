@@ -4,7 +4,7 @@ import java.io.BufferedReader;
 import java.io.InputStreamReader;
 
 // Игры быки и коровы, была реализована в С++, ща пробую в Java
-public class bullANDcows {
+public class BullANDcows {
     public static void main (String[] args)
             throws java.io.IOException{
 
@@ -22,7 +22,7 @@ public class bullANDcows {
             try{ //тут начинается какая то дичь, надо сюда вернуться, когда дойду до главы соответствующей
                 String s = fullNumber.readLine();
                 numberOne = Integer.parseInt(s);
-                System.out.println(numberOne);
+                // System.out.println(numberOne); // Проверка введеного числа
             }catch (Exception ex){
                 ex.printStackTrace();
             }
@@ -31,12 +31,14 @@ public class bullANDcows {
              num2 = numberOne/100%10; // определяем 2 цифру числа
              num1 = numberOne/1000;// определяем  цифру 1 числа
             int[] checkNumber = {numberOne, num1, num2, num3, num4 }; // Создаем массив из числа и цифр
-             arrayResult = validationFullNumber.checkNumber(checkNumber); //отправляем на проверку число и цифры
-            for(int i=0; i < 2; i++){
+             arrayResult = ValidationFullNumber.checkNumber(checkNumber); //отправляем на проверку число и цифры
+
+            //если надо будет глянуть какие значения получаем на выходе
+           /* for(int i=0; i < 2; i++){
                 System.out.println(arrayResult[i]);
-            }
+            } */
         } while ( arrayResult[0] == false ||  arrayResult[1] == false);
 
-        System.out.println("Надо угадать число " + fullNumber);
+        System.out.println("Надо угадать число " + numberOne);
     }
 }
