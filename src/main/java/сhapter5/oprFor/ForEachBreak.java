@@ -1,6 +1,6 @@
 package сhapter5.oprFor;
 
-public class ForEachBreake {
+public class ForEachBreak {
     public static void main (String[] args) {
 
         int sum = 0;
