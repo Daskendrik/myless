@@ -1,6 +1,9 @@
 package сhapter5;
 
-public class bigExample {
+import java.io.BufferedReader;
+import java.io.InputStreamReader;
+
+public class BigExample {
     public static void main (String[] args)
     throws java.io.IOException{
 
@@ -13,7 +16,14 @@ public class bigExample {
             System.out.println("    4. do-while");
             System.out.println("    5. for ");
             System.out.println(" select the desired item ");
-            choice = (char) System.in.read(); //Тут интересно считывается введеный симвл, если написать 87 и нажать ентр, он этот шаг пропустит 2 раза, но прокрутит do
+            choice = '6'; //Тут интересно считывается введеный симвл, если написать 87 и нажать ентр, он этот шаг пропустит 2 раза, но прокрутит do
+            BufferedReader r = new BufferedReader(new InputStreamReader(System.in));
+            try{
+                String s = r.readLine();
+                System.out.println(s);
+            }catch (Exception ex){
+                ex.printStackTrace();
+            }
         } while (choice<'1' || choice>'5');
 
         switch (choice) {

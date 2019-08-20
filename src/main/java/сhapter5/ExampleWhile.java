@@ -1,6 +1,6 @@
 package сhapter5;
 
-public class exampleWhile {
+public class ExampleWhile {
     public static void main (String[] args) {
 
         int n = 10;

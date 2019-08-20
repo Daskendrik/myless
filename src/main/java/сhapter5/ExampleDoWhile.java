@@ -1,6 +1,6 @@
 package сhapter5;
 
-public class exampleDoWhile {
+public class ExampleDoWhile {
     public static void main (String[] args) {
 
         int n = 10;

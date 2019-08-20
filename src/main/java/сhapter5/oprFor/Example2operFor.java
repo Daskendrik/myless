@@ -1,6 +1,6 @@
 package сhapter5.oprFor;
 
-public class example2operFor {
+public class Example2operFor {
     public static void main (String[] args) {
 
        int a,b;
