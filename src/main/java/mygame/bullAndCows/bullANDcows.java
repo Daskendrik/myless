@@ -13,8 +13,9 @@ public class BullANDcows {
         int numberTwo = 0; // Число, которое вводят для отгадки
         int num1, num2, num3, num4; // цифры, которые надо угадать
         int tryNum1, tryNum2, tryNum3, tryNum4; // цифры, которые будет вводить пользователь, который угадывает
-        int countCows, countBulls;
+        int countCows, countBulls; // подсчет коров и быков
         boolean[] arrayResult; // проверка числа и цифр
+        int theTry; // количество попыток
         System.out.println("Ходит первый игрок");
         do { // Загадываем число
             System.out.println("Введите 4х значное число, без повторяющихся цифр");
@@ -48,7 +49,9 @@ public class BullANDcows {
         // УРОВЕНЬ 1, загадывает и угадывает человек, количество попыток бесконечно
         System.out.println("Игрок 2 угадывает");
         // Проверяем число, которое было введено ( эта проверка уже есть выше)
+        theTry = 1;
         do {
+            System.out.println("Твоя попытка номер - " + theTry);
             do { // Вводим число для проверки
                 System.out.println("Введите 4х значное число, без повторяющихся цифр");
                 try { //тут начинается какая то дичь, надо сюда вернуться, когда дойду до главы соответствующей
@@ -88,8 +91,11 @@ public class BullANDcows {
                 System.out.println("Быков:" + countBulls );
                 System.out.println("Попытайся еще раз :D");
             }
+            theTry++;
+            System.out.println(" ");
         } while (countBulls < 4);
         System.out.println("Урашечки, победа! ");
+        System.out.println("Количсетво твоих попыток: " + (theTry-1));
     }
 
 
