@@ -13,6 +13,7 @@ public class BullANDcows {
         int numberTwo = 0; // Число, которое вводят для отгадки
         int num1, num2, num3, num4; // цифры, которые надо угадать
         int tryNum1, tryNum2, tryNum3, tryNum4; // цифры, которые будет вводить пользователь, который угадывает
+        int countCows, countBulls;
         boolean[] arrayResult; // проверка числа и цифр
         System.out.println("Ходит первый игрок");
         do { // Загадываем число
@@ -23,7 +24,7 @@ public class BullANDcows {
                 // System.out.println(numberOne); // Проверка введеного числа
             }catch (Exception ex){
                 ex.printStackTrace();
-            } // тут личь заканчивается
+            } // тут дичь заканчивается
              num4 = numberOne%10; // определяем 4 цифру числа
              num3 = numberOne/10%10; // определяем 3 цифру числа
              num2 = numberOne/100%10; // определяем 2 цифру числа
@@ -38,45 +39,58 @@ public class BullANDcows {
         } while (!arrayResult[0] || !arrayResult[1]);
 
         System.out.println("Надо угадать число " + numberOne);
+        //Не знаю как еще, но пусть пока экран идет просто наверх, нужно как то чистить
+        for (int v =0; v<10; v++) {
+            System.out.println();
+        }
 
 
         // УРОВЕНЬ 1, загадывает и угадывает человек, количество попыток бесконечно
         System.out.println("Игрок 2 угадывает");
         // Проверяем число, которое было введено ( эта проверка уже есть выше)
-        do { // Вводим число для проверки
-            System.out.println("Введите 4х значное число, без повторяющихся цифр");
-            try{ //тут начинается какая то дичь, надо сюда вернуться, когда дойду до главы соответствующей
-                String s = fullNumber.readLine();
-                numberTwo = Integer.parseInt(s);
-                // System.out.println(numberOne); // Проверка введеного числа
-            }catch (Exception ex){
-                ex.printStackTrace();
-            } // тут личь заканчивается
-            tryNum4 = numberTwo%10; // определяем 4 цифру числа
-            tryNum3 = numberTwo/10%10; // определяем 3 цифру числа
-            tryNum2 = numberTwo/100%10; // определяем 2 цифру числа
-            tryNum1 = numberTwo/1000;// определяем  цифру 1 числа
-            int[] checkNumber = {numberTwo, tryNum1, tryNum2, tryNum3, tryNum4 }; // Создаем массив из числа и цифр
-            arrayResult = ValidationFullNumber.checkNumber(checkNumber); //отправляем на проверку число и цифры и впихиваем результат
+        do {
+            do { // Вводим число для проверки
+                System.out.println("Введите 4х значное число, без повторяющихся цифр");
+                try { //тут начинается какая то дичь, надо сюда вернуться, когда дойду до главы соответствующей
+                    String s = fullNumber.readLine();
+                    numberTwo = Integer.parseInt(s);
+                    // System.out.println(numberOne); // Проверка введеного числа
+                } catch (Exception ex) {
+                    ex.printStackTrace();
+                } // тут дичь заканчивается
+                tryNum4 = numberTwo % 10; // определяем 4 цифру числа
+                tryNum3 = numberTwo / 10 % 10; // определяем 3 цифру числа
+                tryNum2 = numberTwo / 100 % 10; // определяем 2 цифру числа
+                tryNum1 = numberTwo / 1000;// определяем  цифру 1 числа
+                int[] checkNumber = {numberTwo, tryNum1, tryNum2, tryNum3, tryNum4}; // Создаем массив из числа и цифр
+                arrayResult = ValidationFullNumber.checkNumber(checkNumber); //отправляем на проверку число и цифры и впихиваем результат
 
-            //если надо будет глянуть какие значения получаем на выходе
+                //если надо будет глянуть какие значения получаем на выходе
            /* for(int i=0; i < 2; i++){
                 System.out.println(arrayResult[i]);
             } */
-        } while (!arrayResult[0] || !arrayResult[1]);
-         // Проверяем, что у нас числа  и цифры правильно сохранились
-        System.out.println("Мы загадали numberOne " + numberOne + "\nПервая цифра " + num1 + "\nВторая цифра " + num2 + "\nТретья цифра " + num3 + "\nЧетвертая цифра " + num4);
-        System.out.println("Мы пытаемся догадаться numberOne " + numberTwo + "\nПервая цифра " + tryNum1 + "\nВторая цифра " + tryNum2 + "\nТретья цифра " + tryNum3 + "\nЧетвертая цифра " + tryNum4);
+            } while (!arrayResult[0] || !arrayResult[1]);
+            // Проверяем, что у нас числа  и цифры правильно сохранились
+            // System.out.println("Мы загадали numberOne " + numberOne + "\nПервая цифра " + num1 + "\nВторая цифра " + num2 + "\nТретья цифра " + num3 + "\nЧетвертая цифра " + num4);
+            // System.out.println("Мы пытаемся догадаться numberOne " + numberTwo + "\nПервая цифра " + tryNum1 + "\nВторая цифра " + tryNum2 + "\nТретья цифра " + tryNum3 + "\nЧетвертая цифра " + tryNum4);
+            int[] actual = {num1, num2, num3, num4}; // Создаем массив из цифр которые загадали
+            int[] expected = {tryNum1, tryNum2, tryNum3, tryNum4}; // Создаем массив из цифр которые угадываем
+
+            // Проверяем быков
 
 
-        // Проверяем быков
+            // Провереям коров
+            countBulls = DVbulls.checkBulls(expected, actual);
+            countCows = DVcows.checkCows(expected, actual); //отправляем на проверку число и цифры и впихиваем результат
 
-        // Провереям коров
-        int[] actual = {num1, num2, num3, num4};
-        int[] expected = {tryNum1, tryNum2, tryNum3, tryNum4}; // Создаем массив из цифр
-        int countCows = DVcows.checkCows(expected, actual); //отправляем на проверку число и цифры и впихиваем результат
-
-
+            if (countBulls != 4) {
+                System.out.println("Коров:" + countCows );
+                System.out.println("Быков:" + countBulls );
+                System.out.println("Попытайся еще раз :D");
+            }
+        } while (countBulls < 4);
+        System.out.println("Урашечки, победа! ");
     }
+
 
 }
