@@ -16,14 +16,7 @@ public class BigExample {
             System.out.println("    4. do-while");
             System.out.println("    5. for ");
             System.out.println(" select the desired item ");
-            choice = '6'; //Тут интересно считывается введеный симвл, если написать 87 и нажать ентр, он этот шаг пропустит 2 раза, но прокрутит do
-            BufferedReader r = new BufferedReader(new InputStreamReader(System.in));
-            try{
-                String s = r.readLine();
-                System.out.println(s);
-            }catch (Exception ex){
-                ex.printStackTrace();
-            }
+            choice = (char) System.in.read();
         } while (choice<'1' || choice>'5');
 
         switch (choice) {
