@@ -18,6 +18,9 @@ public class BullANDcows {
         int theTry; // количество попыток
         String play;
         do {
+
+
+
             numberOne = 0;
 
             System.out.println("Ходит первый игрок");
@@ -103,7 +106,23 @@ public class BullANDcows {
             System.out.println("Количсетво твоих попыток: " + (theTry - 1));
             System.out.println("Если хочешь выйти введи N");
             play = fullNumber.readLine();
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
         } while (!play.equals("N"));
+    System.out.println("Спасибо за игру :)");
     }
 
 
