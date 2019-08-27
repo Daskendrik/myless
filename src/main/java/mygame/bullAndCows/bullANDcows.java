@@ -17,7 +17,7 @@ public class BullANDcows {
         boolean[] arrayResult; // проверка числа и цифр
         int theTry; // количество попыток
         int level = 0; //уровень игры
-        String play = "Change";
+        String play = "";
 
         do { // Это вся игра
             System.out.println("Выберите уровень игры");
@@ -33,7 +33,7 @@ public class BullANDcows {
             }
             switch (level) {
                 case 1:
-                    do { // УРОВЕНЬ 1, загадывает и угадывает человек, количество попыток бесконечно
+                     // УРОВЕНЬ 1, загадывает и угадывает человек, количество попыток бесконечно
                         numberOne = 0;
 
                         System.out.println("Ходит первый игрок");
@@ -114,15 +114,18 @@ public class BullANDcows {
                         } while (countBulls < 4);
                         System.out.println("Урашечки, победа! ");
                         System.out.println("Количсетво твоих попыток: " + (theTry - 1));
-                        System.out.println("Если хочешь  поменять уровень игры введи Change ; если выйти введи N");
+                        System.out.println("Если хочешь  выйти введи N");
                         play = fullNumber.readLine();
 
 
-                    } while (!play.equals("N") | !play.equals("Change"));
+
+                    break;
                 case 2:
                     System.out.println("Уровень в работе");
                     break;
                 default:
+                    System.out.println("Где ты видишь этот пункт? :D ");
+                    System.out.println(" ");
                     break;
             }
         } while (!play.equals("N"));
