@@ -9,7 +9,7 @@ public class ForEachBreak {
         for (int x: nums) {
             System.out.println("Value is " + x);
             sum += x;
-            if (x ==5) break;
+            if (x ==5) break; //прерываем цикл
         }
         System.out.println("Amount of 5 values is " + sum);
 
