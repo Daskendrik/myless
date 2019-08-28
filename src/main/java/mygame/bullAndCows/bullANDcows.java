@@ -61,9 +61,8 @@ public class BullANDcows {
 
                         System.out.println("Надо угадать число " + numberOne);
                         //Не знаю как еще, но пусть пока экран идет просто наверх, нужно как то чистить
-                        for (int v = 0; v < 10; v++) {
-                            System.out.println();
-                        }
+                        for (int v = 0; v < 20; v++)   System.out.println();
+
 
 
                         System.out.println("Игрок 2 угадывает");
