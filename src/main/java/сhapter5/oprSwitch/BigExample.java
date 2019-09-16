@@ -1,4 +1,4 @@
-package сhapter5;
+package сhapter5.oprSwitch;
 
 import java.io.BufferedReader;
 import java.io.InputStreamReader;

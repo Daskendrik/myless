@@ -1,4 +1,4 @@
-package сhapter5;
+package сhapter5.oprWhile;
 
 public class ExampleWhile {
     public static void main (String[] args) {

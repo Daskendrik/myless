@@ -1,4 +1,4 @@
-package сhapter5;
+package сhapter5.oprSwitch;
 
 public class Example2Switch {
     public static void main (String[] args) {
