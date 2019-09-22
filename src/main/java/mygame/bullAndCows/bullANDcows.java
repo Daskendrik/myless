@@ -5,7 +5,7 @@ import java.io.IOException;
 import java.io.InputStreamReader;
 
 // Игры быки и коровы, была реализована в С++, ща пробую в Java
-public class BullANDcows {
+class BullANDcows {
     public static void main (String[] args) throws IOException {
 
         BufferedReader fullNumber = new BufferedReader(new InputStreamReader(System.in)); // число которое введут
