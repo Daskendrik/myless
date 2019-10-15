@@ -1,4 +1,4 @@
-package chaoter6.boxDemo1;
+package chapter6.boxDemo1;
 
 class Box {
     double width;

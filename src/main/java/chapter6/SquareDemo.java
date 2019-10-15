@@ -1,4 +1,4 @@
-package chaoter6;
+package chapter6;
 
 public class SquareDemo {
 
