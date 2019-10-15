@@ -1,4 +1,4 @@
-package chaoter6;
+package chaoter6.boxDemo1;
 
 public class BoxDemo2 {
     public static void main (String [] args) {
