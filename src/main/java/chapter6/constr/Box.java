@@ -6,11 +6,11 @@ class Box {
     double depth;
 
     // а вот и конструктор класса Box
-    Box () {
+    Box (double width, double height, double depth) {
         System.out.println("Конструирование объекта Box");
-        width = 10;
-        height = 10;
-        depth = 10;
+        this.width = width;
+        this.height = height;
+        this.depth = depth;
     }
 
     // расчитать и вернуть объем
@@ -21,7 +21,7 @@ class Box {
 
 class BoxDemo6 {
     public  static  void main (String [] args) {
-        Box mybox1 = new Box();
+        Box mybox1 = new Box(5,5,10);
         double vol;
         vol = mybox1.volume2();
         System.out.println("Объем равен " + vol);
