@@ -1,4 +1,4 @@
-package chaoter6;
+package chapter6.boxDemo1;
 
 class Box {
     double width;
@@ -8,7 +8,19 @@ class Box {
         System.out.print("Объем равен ");
         System.out.println(width * height * depth);
     }
+    // расчитать и вернуть объем
+     double volume2() {
+        return width * height * depth;
+     }
+
+     //установить размеры параллепипеда
+    void setDim (double w, double h, double d) {
+        width = w;
+        height = h;
+        depth = d;
+    }
 }
+
 
 class BoxDemo {
     public static void main (String [] args) {
