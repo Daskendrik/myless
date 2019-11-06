@@ -8,10 +8,14 @@ public class Outer {
     }
     //внутренний класс
     class Inner {
+        int y =10;
         void display() {
             System.out.println("вывод: outer_x = " + outer_x);
         }
     }
+    /*void showy() {
+        System.out.println(y);
+    }*/ //Y является не локальной тут, он только в классе Inner
 }
 
 class InnerClassDemo{
