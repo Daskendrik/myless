@@ -3,8 +3,10 @@ package chapter7;
 public class Outer {
     int outer_x = 100;
     void test() {
-        Inner inner = new Inner();
-        inner.display();
+        for (int i = 0; i<5; i++) {
+            Inner inner = new Inner();
+            inner.display();
+        }
     }
     //внутренний класс
     class Inner {
