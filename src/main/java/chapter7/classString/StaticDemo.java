@@ -1,4 +1,4 @@
-package chapter7;
+package chapter7.classString;
 
 public class StaticDemo {
     static int a = 42;

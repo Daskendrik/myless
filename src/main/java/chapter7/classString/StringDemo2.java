@@ -1,4 +1,4 @@
-package chapter7;
+package chapter7.classString;
 
 public class StringDemo2 {
     public static void main (String[] args){
