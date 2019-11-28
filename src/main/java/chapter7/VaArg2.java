@@ -26,11 +26,8 @@ public class VaArg2 {
 
 
     public static void main (String[] args) {
-        vaTest(1, 2, 3);
         vaTest("Проверка", "10", "20");
         vaTest(true, false,false,true,true,false);
-        vaTest();
-        vaTest(2);
 
     }
 }
